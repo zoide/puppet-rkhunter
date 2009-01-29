@@ -1,0 +1,9 @@
+# $Id$
+
+Writtenby: udo.waechter@uni-osnabrueck.de
+License: GPL
+
+== Module: rkhunter
+Install and configure rkhunter package
+
+Tested on Linux (Debian/Ubuntu)
