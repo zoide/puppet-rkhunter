@@ -347,13 +347,13 @@ ALLOWHIDDENDIR=/dev/.initramfs
 # Even though this adds to the running time it is highly recommended to
 # leave it like this.
 #
-#SCAN_MODE_DEV=THOROUGH
+SCAN_MODE_DEV=THOROUGH
 
 #
 # This setting tells rkhunter where the inetd configuration
 # file is located.
 #
-#INETD_CONF_PATH=/etc/inetd.conf
+INETD_CONF_PATH=/etc/inetd.conf
 
 #
 # Allow the following enabled inetd services.
@@ -361,7 +361,7 @@ ALLOWHIDDENDIR=/dev/.initramfs
 #
 # Below are some Solaris 9 and 10 services that may want to be whitelisted.
 #
-INETD_ALLOWED_SVC=/etc/xinet.d/nrpe
+#INETD_ALLOWED_SVC=/etc/xinet.d/nrpe
 #INETD_ALLOWED_SVC=echo
 #INETD_ALLOWED_SVC=/usr/dt/bin/rpc.ttdbserverd
 #INETD_ALLOWED_SVC=/usr/openwin/lib/fs.auto
@@ -401,7 +401,7 @@ XINETD_CONF_PATH=/etc/xinetd.conf
 # the xinetd file pathnames.
 # Only one service (file) per line (use multiple XINETD_ALLOWED_SVC lines).
 #
-#XINETD_ALLOWED_SVC=/etc/xinetd.d/echo
+XINETD_ALLOWED_SVC=/etc/xinetd.d/nrpe
 
 #
 # This setting tells rkhunter the local system startup file pathnames.
