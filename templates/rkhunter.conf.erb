@@ -59,14 +59,14 @@ MIRRORS_MODE=0
 # Multiple addresses may be specified simply be separating them
 # with a space.
 #
-#MAIL-ON-WARNING=me@mydomain   root@mydomain
+MAIL-ON-WARNING=<%= scope.lookupvar('ROOT_MAIL') %>
 
 #
 # Specify the mail command to use if MAIL-ON-WARNING is set.
 # NOTE: Double quotes are not required around the command, but
 # are required around the subject line if it contains spaces.
 #
-MAIL_CMD=mail -s "[rkhunter] Warnings found for <%= fqdn %>"
+MAIL_CMD=mail -s "[rkhunter] Warnings for <%= fqdn %>"
 
 #
 # Specify the temporary directory to use.
@@ -296,6 +296,7 @@ SCRIPTWHITELIST=/usr/sbin/prelink
 #
 ALLOWHIDDENDIR=/etc/.java
 ALLOWHIDDENDIR=/dev/.udev
+ALLOWHIDDENDIR=/dev/.mdadm
 #ALLOWHIDDENDIR=/dev/.udevdb
 #ALLOWHIDDENDIR=/dev/.udev.tdb
 ALLOWHIDDENDIR=/dev/.static
@@ -393,7 +394,7 @@ SCAN_MODE_DEV=THOROUGH
 # This setting tells rkhunter where the xinetd configuration
 # file is located.
 #
-XINETD_CONF_PATH=/etc/xinetd.conf
+#XINETD_CONF_PATH=/etc/xinetd.conf
 
 #
 # Allow the following enabled xinetd services. Whilst it would be
@@ -402,7 +403,7 @@ XINETD_CONF_PATH=/etc/xinetd.conf
 # the xinetd file pathnames.
 # Only one service (file) per line (use multiple XINETD_ALLOWED_SVC lines).
 #
-XINETD_ALLOWED_SVC=/etc/xinetd.d/nrpe
+#XINETD_ALLOWED_SVC=/etc/xinetd.d/nrpe
 
 #
 # This setting tells rkhunter the local system startup file pathnames.
