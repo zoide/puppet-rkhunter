@@ -295,22 +295,23 @@ SCRIPTWHITELIST=/usr/sbin/prelink
 # One directory per line (use multiple ALLOWHIDDENDIR lines).
 #
 ALLOWHIDDENDIR=/etc/.java
+ALLOWHIDDENDIR=/etc/.git
 ALLOWHIDDENDIR=/dev/.udev
+ALLOWHIDDENDIR=/dev/.udev/db
 ALLOWHIDDENDIR=/dev/.mdadm
-#ALLOWHIDDENDIR=/dev/.udevdb
-#ALLOWHIDDENDIR=/dev/.udev.tdb
 ALLOWHIDDENDIR=/dev/.static
 ALLOWHIDDENDIR=/dev/.initramfs
-#ALLOWHIDDENDIR=/dev/.SRC-unix
 
 #
 # Allow the specified hidden files.
 # One file per line (use multiple ALLOWHIDDENFILE lines).
 # 
-#ALLOWHIDDENFILE=/etc/.java
-#ALLOWHIDDENFILE=/usr/share/man/man1/..1.gz
-#ALLOWHIDDENFILE=/etc/.pwd.lock
-#ALLOWHIDDENFILE=/etc/.init.state
+ALLOWHIDDENFILE=/etc/.gitmodules
+ALLOWHIDDENFILE=/etc/.gitignore
+ALLOWHIDDENFILE=/etc/.etckeeper
+ALLOWHIDDENFILE=/dev/.udev/queue.bin
+ALLOWHIDDENFILE=/dev/.mdadm/map
+
 
 #
 # Allow the specified processes to use deleted files.
